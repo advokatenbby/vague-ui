@@ -1,0 +1,83 @@
+{
+    "button": {
+        "category": "ui",
+        "files": [
+            "components/ui/Button/Button.vue",
+            "components/ui/Button/index.ts",
+            "components/ui/Button/button.types.ts",
+            "components/ui/Button/button.variants.ts",
+        ]
+    },
+
+    "card": {
+        "category": "ui",
+        "files": [
+            "components/ui/Card/Card.vue",
+            "components/ui/Card/CardHeader.vue",
+            "components/ui/Card/CardTitle.vue",
+            "components/ui/Card/CardSubtitle.vue",
+            "components/ui/Card/CardDesc.vue",
+            "components/ui/Card/CardContent.vue",
+            "components/ui/Card/CardFooter.vue",
+            "components/ui/Card/index.ts",
+        ]
+    },
+
+    "tabs": {
+        "category": "ui",
+        "files": [
+            "components/ui/Tabs/Tab.vue", 
+            "components/ui/Tabs/Tabs.vue", 
+            "components/ui/Tabs/TabList.vue", 
+            "components/ui/Tabs/TabPanel.vue", 
+
+            "components/ui/Tabs/index.ts", 
+            "components/ui/Tabs/tabs.context.ts", 
+            "components/ui/Tabs/tabs.types.ts", 
+            "components/ui/Tabs/tabs.variants.ts", 
+        ]
+    },
+
+    "input": { 
+        "category": "ui",
+        "files": [
+            "components/ui/Input/Input.vue", 
+            "components/ui/Input/index.ts", 
+            "components/ui/Input/input.types.ts", 
+            "components/ui/Input/input.variants.ts", 
+        ]
+    },
+
+    "select": { 
+        "category": "ui",
+        "files": [
+            "components/ui/Select/Select.vue", 
+            "components/ui/Select/SelectOption.vue", 
+            "components/ui/Select/index.ts", 
+        ]
+    },
+
+    "form": {
+        "category": "form",
+        "files": [
+            "components/form/FormField.vue",
+            "components/form/index.ts",
+            "components/form/rules.ts",
+            "components/form/useForm.ts"
+        ]
+    },
+    "container": {
+        "category": "layout",
+        "files": [
+            "components/layout/Container/Container.vue",
+            "components/layout/Container/index.ts",
+        ]
+    },
+    "spacer": {
+        "category": "layout",
+        "files": [
+            "components/layout/Spacer/Spacer.vue",
+            "components/layout/Spacer/index.ts",
+        ]
+    }
+}
