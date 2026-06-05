@@ -1,6 +1,7 @@
 {
     "button": {
         "category": "ui",
+        "desc": "Button Component",
         "files": [
             "components/ui/Button/Button.vue",
             "components/ui/Button/index.ts",
@@ -11,6 +12,7 @@
 
     "card": {
         "category": "ui",
+        "desc": "Card component",
         "files": [
             "components/ui/Card/Card.vue",
             "components/ui/Card/CardHeader.vue",
@@ -25,6 +27,7 @@
 
     "tabs": {
         "category": "ui",
+        "desc": "Tabs Component",
         "files": [
             "components/ui/Tabs/Tab.vue", 
             "components/ui/Tabs/Tabs.vue", 
@@ -40,6 +43,7 @@
 
     "input": { 
         "category": "ui",
+        "desc": "Input Component",
         "files": [
             "components/ui/Input/Input.vue", 
             "components/ui/Input/index.ts", 
@@ -50,6 +54,7 @@
 
     "select": { 
         "category": "ui",
+        "desc": "Select Component",
         "files": [
             "components/ui/Select/Select.vue", 
             "components/ui/Select/SelectOption.vue", 
@@ -59,6 +64,7 @@
 
     "form": {
         "category": "form",
+        "desc": "Form Component",
         "files": [
             "components/form/FormField.vue",
             "components/form/index.ts",
@@ -68,6 +74,7 @@
     },
     "container": {
         "category": "layout",
+        "desc": "Container Component",
         "files": [
             "components/layout/Container/Container.vue",
             "components/layout/Container/index.ts",
@@ -75,6 +82,7 @@
     },
     "spacer": {
         "category": "layout",
+        "desc": "Spacer Component",
         "files": [
             "components/layout/Spacer/Spacer.vue",
             "components/layout/Spacer/index.ts",
