@@ -66,10 +66,10 @@
         "category": "form",
         "desc": "Form Component",
         "files": [
-            "components/form/FormField.vue",
-            "components/form/index.ts",
-            "components/form/rules.ts",
-            "components/form/useForm.ts"
+            "components/feedback/form/FormField.vue",
+            "components/feedback/form/index.ts",
+            "components/feedback/form/rules.ts",
+            "components/feedback/form/useForm.ts"
         ]
     },
     "container": {
