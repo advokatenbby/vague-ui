@@ -63,13 +63,13 @@
     },
 
     "form": {
-        "category": "form",
+        "category": "feedback",
         "desc": "Form Component",
         "files": [
-            "components/feedback/form/FormField.vue",
-            "components/feedback/form/index.ts",
-            "components/feedback/form/rules.ts",
-            "components/feedback/form/useForm.ts"
+            "components/feedback/Form/FormField.vue",
+            "components/feedback/Form/index.ts",
+            "components/feedback/Form/rules.ts",
+            "components/feedback/Form/useForm.ts"
         ]
     },
     "container": {
