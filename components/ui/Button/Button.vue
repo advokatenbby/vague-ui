@@ -11,8 +11,8 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 
 const classes = computed(() => {
     return [
-        "rounded-sm transition-colors duration-150 select-none",
-        "inline-flex items-center justify-center cursor-pointer",
+        "rounded-sm transition-colors duration-150",
+        "inline-flex items-center justify-center cursor-pointer select-none",
 
         buttonSizes[props.size ?? "md"],
         buttonVariants[props.variant ?? "default"],
