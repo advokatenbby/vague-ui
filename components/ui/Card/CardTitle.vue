@@ -1,5 +1,7 @@
 <script setup lang="ts">
-    
+
+import { colors } from '@/components/theme/colors.ts'
+
 </script>
 
 <template> 
@@ -7,9 +9,11 @@
         class="
             text-lg
             font-medium
-            text-[#e5e5e7]
             tracking-tight
         "
+        :style="{
+            color: colors.text.foreground
+        }"
     >
         <slot />
     </p>

@@ -1,14 +1,18 @@
 <script setup lang="ts">
-    
+
+import { colors } from '@/components/theme/colors.ts'
+ 
 </script>
 
 <template>
     <p
         class="
             text-xs
-            text-[#8a8a92]
             mt-0.5
         "
+        :style="{
+            color: colors.text.muted
+        }"
     >
         <slot />
     </p>
