@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { inject, ref, computed, watchEffect } from "vue"
+import { inject, ref, computed, watchEffect } from "vue"
 
 const tabs = inject<any>("tabs")!
 
@@ -32,26 +32,19 @@ watchEffect(() => {
 </script>
 
 <template>
-    <div
-    class="relative flex"
-    :class="tabs.variant === 'underline'
+    <div class="relative flex" :class="tabs.variant === 'underline'
         ? 'border-b border-[#1f1f23]'
         : ''
-    "
->
-    <slot />
+        ">
+        <slot />
 
-    <div
-        v-if="isUnderline"
-        class="
+        <div v-if="isUnderline" class="
             absolute bottom-0 h-[2px]
             bg-[#e4e4e6]
             transition-all duration-200 ease-out
-        "
-        :style="{
+        " :style="{
             transform: `translateX(${indicator.left}px)`,
             width: indicator.width + 'px'
-        }"
-    />
-</div>
+        }" />
+    </div>
 </template>
