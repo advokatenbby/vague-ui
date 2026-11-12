@@ -1,4 +1,7 @@
 <script setup lang="ts">
+
+import { colors } from '@/components/theme/colors.ts'
+
 import { ref } from "vue"
 
 defineProps<{
@@ -20,8 +23,10 @@ const focused = ref(false)
             class="
                 text-sm
                 font-medium
-                text-[#e4e4e6]
             "
+            :style="{
+                color: colors.text.foreground
+            }"
         >
             {{ label }}
         </label>
@@ -33,8 +38,10 @@ const focused = ref(false)
                 v-if="focused && $slots.hint && !error"
                 class="
                     text-xs
-                    text-[#8a8a92]
                 "
+                :style="{
+                    color: colors.text.muted
+                }"
             >
                 <slot name="hint" />
             </div>
@@ -45,8 +52,10 @@ const focused = ref(false)
                 v-if="error"
                 class="
                     text-xs
-                    text-[#ff5f5f]
                 "
+                :style="{
+                    color: colors.status.danger
+                }"
             >
                 {{ error }}
             </div>
