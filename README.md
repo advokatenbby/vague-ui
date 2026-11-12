@@ -11,20 +11,11 @@ vague add button
 vague add card
 ```
 
-## Available Components
+List components using the Vague CLI: 
 
-### UI
-- Button
-- Card
-- Input
-- Select
-
-### Layout
-- Container
-- Spacer
-
-### Feedback
-- Form
+```bash
+vague list
+```
 
 ## Development
 
