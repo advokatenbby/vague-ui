@@ -1,34 +1,35 @@
 <script setup lang="ts">
-import { inject, ref, computed, watchEffect } from "vue"
+import { inject, ref, computed, watch, nextTick } from "vue"
 
 const tabs = inject<any>("tabs")!
 
 const indicator = ref({
     left: 0,
-    width: 0,
+    width: 0
 })
 
 const isUnderline = computed(
     () => tabs.variant === "underline"
 )
 
-const updateIndicator = () => {
-    const el = tabs.getTab?.(tabs.active.value)
-    if (!el) return
+const updateIndicator = async () => {
+    await nextTick()
 
-    const rect = el.getBoundingClientRect()
+    const el = tabs.getTab(tabs.active.value)
+
+    if (!el) return
 
     indicator.value = {
         left: el.offsetLeft,
-        width: rect.width,
+        width: el.offsetWidth
     }
 }
 
-watchEffect(() => {
-    if (isUnderline.value) {
-        updateIndicator()
-    }
-})
+watch(
+    () => tabs.active.value,
+    updateIndicator,
+    { immediate: true, flush: "post" }
+)
 </script>
 
 <template>
