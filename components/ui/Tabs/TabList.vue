@@ -33,7 +33,7 @@ watch(
 </script>
 
 <template>
-    <div class="relative flex" :class="tabs.variant === 'underline'
+    <div class="relative flex gap-1" :class="tabs.variant === 'underline'
         ? 'border-b border-[#1f1f23]'
         : ''
         ">
