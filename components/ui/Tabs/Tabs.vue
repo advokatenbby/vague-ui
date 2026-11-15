@@ -1,41 +1,62 @@
 <script setup lang="ts">
 
-import type { TabsVariant } from './tabs.types'
-import { provide, ref } from "vue"
+import { provide, ref, watch } from 'vue'
+import type { TabsVariant } from './tabs.types' 
 
-const props = withDefaults( 
-    defineProps<{ 
-        defaultValue?: string 
+const props = withDefaults(
+    defineProps<{
+        defaultValue?: string, 
+        value?: string, 
         variant?: TabsVariant
     }>(),
-    { 
-        variant: "underline"
+    {
+        variant: 'underline'
     }
 )
 
-const active = ref(props.defaultValue ?? "")
+const emit = defineEmits<{
+    "update:value": [value: string]
+}>()
+
+const active = ref(
+    props.value ?? props.defaultValue ?? ""
+)
+
+watch( 
+    () => props.value, 
+    (value) => {
+        if (value !== undefined) {
+            active.value = value
+        }
+    }
+)
 
 const setActive = (value: string) => {
-    active.value = value
+    if (props.value === undefined) {
+        active.value = value 
+    }
+
+    emit("update:value", value)
 }
 
-const tabsMap = new Map()
+const tabsMap = new Map<string, HTMLElement>()
 
-const registerTab = (value, el) => tabsMap.set(value, el)
+const registerTab = (value: string, el: HTMLElement) => {
+    tabsMap.set(value, el)
+}
 
-const getTab = (value) => tabsMap.get(value)
+const getTab = (value: string) => {
+    return tabsMap.get(value)
+}
 
-provide("tabs", {
-    active,
-    setActive,
-    registerTab,
-    getTab,
-    variant: props.variant,
+provide('tabs', {
+    active, 
+    setActive, 
+    registerTab, 
+    getTab, 
+    variant: props.variant
 })
 
-provide("tabsMap", {
-    getTab,
-})
 </script>
 
 <template>
