@@ -19,7 +19,7 @@ const props = defineProps<{
                 width: width + 'px',
                 height: height + 'px',
                 backgroundColor: colors.background.DEFAULT,
-                border: '1px solid colors.border.DEFAULT'
+                border: `1px solid ${colors.border.DEFAULT}`,
             }"
             >
             <slot />
